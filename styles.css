@@ -251,3 +251,6 @@ nav ul a { transition: color .2s; }
 @media (prefers-reduced-motion: reduce) {
   .links a:hover, #projects article:hover { transform: none; }
 }
+.skills dt:nth-of-type(5) { grid-row: 5; }
+.skills dd:nth-of-type(5) { grid-row: 6; }
+.skills { row-gap: 0; }
