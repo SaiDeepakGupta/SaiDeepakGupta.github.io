@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SaiDeepak Gupta Karnatakapu | Software Engineer</title>
+  <meta name="description" content="Software engineer with 3+ years building production services and LLM applications in Python and Java.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav aria-label="Main">
+    <a class="brand" href="#top">~/sai</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="top">
+  <p class="prompt"><span class="user">sai@portfolio</span>:<span class="path">~</span>$ <span class="cmd">whoami</span></p>
+  <h1>SaiDeepak Gupta Karnatakapu</h1>
+  <p class="tagline">Software Engineer · Backend, Full-Stack &amp; Generative AI<span class="cursor" aria-hidden="true"></span></p>
+  <p class="location">New York (open to relocation) · Open to full-time roles</p>
+  <p class="links">
+    <a href="mailto:saideepakgupta02@gmail.com">Email</a> ·
+    <a href="https://linkedin.com/in/saideepakgupta">LinkedIn</a> ·
+    <a href="https://github.com/SaiDeepakGupta">GitHub</a> ·
+    <a href="resume.pdf">Resume (PDF)</a>
+  </p>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <h2>About</h2>
+  <p>Software engineer with 3+ years of professional experience building production services and LLM applications in Python and Java. I ship AI with evaluation, guardrails, and monitoring in privacy-sensitive, regulated environments, from KYC on Citi's 48M-user banking platform to generative AI at Rokt. Experienced in object-oriented design, test-driven development, Agile delivery, and on-call operations on AWS.</p>
+  <ul class="stats">
+    <li><strong>3+ years</strong> professional experience</li>
+    <li><strong>48M-user</strong> banking platform (Citi)</li>
+    <li><strong>29%</strong> lower p95 API latency at Rokt</li>
+    <li><strong>2× AWS</strong> certified</li>
+  </ul>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <article>
+    <h3>Software Engineer · Rokt (Contract via Axitem)</h3>
+    <p class="meta">Aug 2025 – Present · New York</p>
+    <p class="meta">Customer data platform (mParticle CDP) · Python, FastAPI, Java, React/TypeScript, Redis, OpenTelemetry, AWS</p>
+    <ul>
+      <li>Built a React/TypeScript identity-tracing tool for the mParticle CDP, using React Query to fetch and cache data from Java/Spring Boot APIs to visualize profile merges, cutting investigation time by about 30%.</li>
+      <li>Reduced p95 latency of real-time decisioning APIs by 29% (185 ms to 132 ms) under production load with Redis caching and parallel asyncio retrieval.</li>
+      <li>Partnered with product managers and data scientists to integrate identity-resolved and predictive customer attributes through Java/Spring Boot APIs and event-driven workflows, enforcing GDPR consent and CCPA opt-out before data reached decisioning.</li>
+      <li>Improved production reliability with OpenTelemetry tracing, Prometheus metrics, and Chronosphere alerting as part of the on-call rotation, helping the team cut incident detection time from 20 to 8 minutes and resolution time from 60 to 25 minutes.</li>
+      <li>Engineered Python LLM evaluation and guardrail workflows for Rokt's generative ad-content engine, using structured outputs and automated quality checks to reduce manual rework of generated headlines and calls-to-action.</li>
+      <li>Wrote Python and Java services test-first (TDD) with pytest and JUnit at 85% coverage; contributed to design and code reviews in Agile sprints.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Software Engineer (Part-time, during MS) · Binghamton University</h3>
+    <p class="meta">Jan 2025 – May 2025 · Binghamton, NY</p>
+    <ul>
+      <li>Owned an on-premises AI teaching agent serving ~200 student queries/day with zero cloud APIs, keeping student records on-premises in line with FERPA.</li>
+      <li>Improved answer accuracy with a hybrid RAG pipeline (LangChain, ChromaDB, Ollama) that merges vector and BM25 search through Reciprocal Rank Fusion.</li>
+      <li>Reduced context overhead by exposing syllabus, lab, and concept docs as 3 MCP tools, orchestrated by a LangGraph agent with step limits and fallbacks that prevent loops and silent failures.</li>
+      <li>Cut inference latency 43% (1.2 s to 680 ms) by serving Llama 3.1 8B with 4-bit quantization and asyncio request batching.</li>
+      <li>Saved ~$400/month versus cloud LLM APIs through fully on-premises inference, backed by a cost-per-query analysis.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Software Engineer · Virtusa (Client: Citi)</h3>
+    <p class="meta">May 2021 – Jul 2023 · Hyderabad, India</p>
+    <ul>
+      <li>Built distributed Java/Spring Boot services and React features for customer onboarding and identity verification (KYC) on a 48M-user banking platform, delivering across the full SDLC from requirements to release.</li>
+      <li>Integrated Onfido identity verification with status updates streamed through Kafka, cutting verification time by about two-thirds, and autoscaled Kafka consumers on AWS EKS for peak event volume.</li>
+      <li>Integrated 15+ third-party REST APIs into the payments and banking module; provisioned AWS (EC2, S3) with Terraform.</li>
+      <li>Automated Jenkins CI/CD build pipelines within Scrum sprint delivery, reducing post-deployment issues by 30%.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>Software Engineer Intern · Virtusa</h3>
+    <p class="meta">Nov 2020 – Mar 2021 · Hyderabad, India</p>
+    <ul>
+      <li>Built a reusable Spring Boot/MVC REST API layer for data retrieval, significantly reducing the time developers needed to add new endpoints.</li>
+      <li>Built an LDAP/JWT authentication system with 90% JUnit unit test coverage.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="projects">
+  <h2>Featured Projects</h2>
+
+  <article>
+    <h3>HireFast – Multi-Tenant Candidate Search</h3>
+    <p class="meta">TypeScript · Next.js · PostgreSQL · Stripe · Claude API</p>
+    <p>Recruiters describe who they need in plain English; an LLM turns the brief into structured filters, Postgres finds and ranks the people, and every filter is shown back as an editable chip.</p>
+    <ul>
+      <li>Designed the PostgreSQL schema and PL/pgSQL search over 5,000 profiles, using the Claude API to turn free-text recruiter queries into GIN-indexed lookups with index-range result paging.</li>
+      <li>Isolated tenant data with row-level security under deny-by-default grants, and made the free-tier limit race-proof with one atomic conditional UPDATE, verified by automated concurrency tests (10 requests: 1 success, 9 rejected).</li>
+      <li>Built a Stripe webhook handler with HMAC verification, idempotent processing keyed on event ID, and an out-of-order event guard.</li>
+    </ul>
+    <p class="repo"><a href="https://github.com/SaiDeepakGupta/rotto-fullstack-task-saideepakgupta">View code on GitHub →</a></p>
+  </article>
+
+  <article>
+    <h3>Source-Grounded RAG Chatbot (Freelance, NDA)</h3>
+    <p class="meta">Python · LangChain · Pinecone · FastAPI · AWS</p>
+    <ul>
+      <li>Built a RAG chatbot that answers questions from a website's own content, chunking and embedding pages into Pinecone, served through FastAPI on AWS Elastic Beanstalk with auto-scaling and JSON schema-validated responses.</li>
+      <li>Cut hallucination rate from 35% to under 8% by enforcing source-grounded answers, each linked to the exact document chunk it came from.</li>
+    </ul>
+    <p class="note">Code is private under NDA.</p>
+  </article>
+
+  <article>
+    <h3>Producer–Consumer Concurrency Patterns</h3>
+    <p class="meta">Python · threading · concurrency testing</p>
+    <ul>
+      <li>Two implementations of the Producer–Consumer problem: a bounded, thread-safe <code>queue.Queue</code> version and a low-level wait/notify version built on <code>threading.Condition</code>.</li>
+      <li>Measures wait times, throughput, and queue utilization to compare how threads block, wake, and synchronize under each approach.</li>
+      <li>Unit tests cover correctness, edge cases, and concurrency safety.</li>
+    </ul>
+    <p class="repo"><a href="https://github.com/SaiDeepakGupta/Producer_Consumer_Concurrency_Patterns-">View code on GitHub →</a></p>
+  </article>
+
+  <article>
+    <h3>Supervised vs Unsupervised Learning on Real-World Datasets</h3>
+    <p class="meta">Python · NumPy · scikit-learn</p>
+    <ul>
+      <li>Implemented logistic regression (gradient descent, L2 regularization, early stopping) and k-means (Hungarian label matching) from scratch, evaluated on the Adult Income, Australian Credit Approval, and EMG signal datasets with ROC and precision-recall analysis.</li>
+      <li>Showed both models perform near chance (~50–58% accuracy) on balanced EMG muscle-signal data, indicating non-linear structure that linear and centroid-based models cannot capture.</li>
+    </ul>
+    <p class="repo"><a href="https://github.com/SaiDeepakGupta/Supervised-vs-Unsupervised-Learning-on-Real-World-Datasets">View code on GitHub →</a></p>
+  </article>
+
+  <p><a href="https://github.com/SaiDeepakGupta?tab=repositories">More on GitHub</a></p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <dl class="skills">
+    <dt>Generative AI</dt>
+    <dd>LLM evaluation &amp; guardrails, structured outputs, hybrid RAG (vector + BM25, Reciprocal Rank Fusion), agentic workflows (LangGraph, MCP), on-prem inference, LangChain, Claude, OpenAI, Pinecone, ChromaDB</dd>
+    <dt>Full-Stack &amp; Event-Driven</dt>
+    <dd>Java, Spring Boot, Python, FastAPI, Kafka, REST microservices, idempotent event processing, Redis caching, React, Next.js, TypeScript</dd>
+    <dt>Data &amp; Cloud</dt>
+    <dd>PostgreSQL (row-level security), MySQL, SQL, AWS (EKS, EC2, S3, RDS, API Gateway, Elastic Beanstalk), Kubernetes, Docker, Terraform</dd>
+    <dt>Reliability &amp; Compliance</dt>
+    <dd>OpenTelemetry, Prometheus, Jenkins CI/CD, TDD (JUnit, pytest), OAuth/JWT, GDPR, CCPA, FERPA, KYC</dd>
+  </dl>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <article>
+    <h3>Master of Science in Computer Science</h3>
+    <p class="meta">State University of New York at Binghamton · Aug 2023 – May 2025</p>
+    <p>Relevant coursework: Operating Systems, Distributed Systems, Database Systems, Data Mining, Design Patterns</p>
+  </article>
+  <article>
+    <h3>Bachelor of Technology in Information Technology</h3>
+    <p class="meta">Malla Reddy College of Engineering and Technology</p>
+  </article>
+
+  <h3>Certifications</h3>
+  <ul>
+    <li>AWS Certified AI Practitioner</li>
+    <li>AWS Certified Cloud Practitioner</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I'm looking for full-time software engineering roles in backend, full-stack, and applied AI. The best way to reach me is email.</p>
+  <ul>
+    <li>Email: <a href="mailto:saideepakgupta02@gmail.com">saideepakgupta02@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://linkedin.com/in/saideepakgupta">linkedin.com/in/saideepakgupta</a></li>
+    <li>GitHub: <a href="https://github.com/SaiDeepakGupta">github.com/SaiDeepakGupta</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 SaiDeepak Gupta Karnatakapu</p>
+</footer>
+
+</body>
+</html>
