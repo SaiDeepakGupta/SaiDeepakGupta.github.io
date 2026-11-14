@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SaiDeepak Gupta Karnatakapu | Software Engineer</title>
-  <meta name="description" content="Backend engineer (3+ years, Python and Java) working on production LLM systems: evaluation, guardrails, and monitoring.">
+  <meta name="description" content="Backend engineer (3+ years, Python/Java) building customer-data and LLM systems: CDP identity resolution, consent-governed pipelines, real-time APIs, RAG, and LLM guardrails on AWS.">
   <meta name="theme-color" content="#0b0f14">
   <meta property="og:title" content="SaiDeepak Gupta Karnatakapu | Software Engineer">
-  <meta property="og:description" content="Backend engineer (3+ years, Python and Java) working on production LLM systems: evaluation, guardrails, and monitoring.">
+  <meta property="og:description" content="Backend engineer (3+ years, Python/Java) building customer-data and LLM systems: CDP identity resolution, consent-governed pipelines, real-time APIs, RAG, and LLM guardrails on AWS.">
   <meta property="og:url" content="https://saideepakgupta.github.io/">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,11 +50,11 @@
 
 <section id="about">
   <h2>About</h2>
-  <p>Backend engineer (3+ years, Python and Java) now working on production LLM systems, mostly evaluation, guardrails, and monitoring. Previously built KYC services for Citi's 48M-user platform; now on generative AI at Rokt.</p>
+  <p>Backend engineer (3+ years, Python/Java) building customer-data and LLM systems: CDP identity resolution, consent-governed pipelines, real-time APIs, RAG, and LLM guardrails on AWS.</p>
   <ul class="stats">
     <li><strong>3+ years</strong> professional experience</li>
     <li><strong>48M-user</strong> banking platform (Citi)</li>
-    <li><strong>29%</strong> lower p95 latency at ~50k RPS (Rokt)</li>
+    <li><strong>29%</strong> lower p95 latency at ~50k peak RPS (Rokt)</li>
     <li><strong>2× AWS</strong> certified</li>
   </ul>
 </section>
@@ -63,16 +63,16 @@
   <h2>Experience</h2>
 
   <article>
-    <h3>Software Engineer / AI Engineer · Rokt (Contract via Axitem)</h3>
+    <h3>Software Engineer / AI Engineer · Rokt</h3>
     <p class="meta">Aug 2025 – Present · New York, NY</p>
-    <p class="meta">Customer data platform (mParticle CDP) · Python, FastAPI, Java, React/TypeScript, Redis, OpenTelemetry, AWS</p>
+    <p class="meta">Full-time, embedded in Rokt engineering (employed through Axitem)</p>
     <ul>
-      <li>Created a React/TypeScript tool to trace mParticle CDP profile merges, caching Spring Boot API data via React Query; cut triage 30%.</li>
-      <li>Cut p95 latency of real-time decisioning APIs 29% (185 ms to 132 ms) at ~50k RPS by replacing sequential network calls with parallel asyncio retrieval and adding a Redis caching layer.</li>
-      <li>Shipped consent-aware data routing to 300+ partner integrations, streaming identity-resolved attributes through Java/Spring Boot APIs with GDPR consent and CCPA opt-out enforced before data reached decisioning.</li>
-      <li>On the on-call rotation, added OpenTelemetry tracing, Prometheus metrics, and Chronosphere alerts that helped the team cut incident detection from 20 to 8 minutes and resolution from 60 to 25.</li>
-      <li>Developed Python LLM evaluation and guardrails for Rokt's generative ad-content engine: JSON schema validation and automated quality filters on 1.5M headlines/day, cutting manual rewrites 45%.</li>
-      <li>Wrote Python and Java services test-first with pytest and JUnit (85% coverage) and took part in design and code reviews.</li>
+      <li>Co-designed and built consent-aware data pipelines (team of 3) routing identity-resolved customer attributes to 300+ partner integrations (~15M events/day), enforcing GDPR/CCPA consent per attribute, per partner with in-memory bitmask checks (&lt;1 ms) and a fail-closed design that blocks sharing if the consent cache is unavailable.</li>
+      <li>Handled consent withdrawal with event-driven Redis invalidation; wrote compliance audit logs asynchronously in micro-batches to monthly-partitioned PostgreSQL tables, keeping logging off the request path.</li>
+      <li>Independently cut p95 latency of real-time decisioning APIs 29% (185 to 132 ms) at ~50k peak RPS: found sequential calls in OpenTelemetry traces, parallelized I/O with asyncio.gather, and added a Redis cluster cache with event-driven + TTL invalidation; scaled on EKS with HPA.</li>
+      <li>Built an offline, multi-tier LLM evaluation pipeline screening 1.5M generated ad headlines/day: regex validation, an ML-team fine-tuned classifier I integrated, and async LLM-as-judge review for ambiguous cases only; defined quality metrics with ML and product, cutting manual overrides 45% at low LLM cost.</li>
+      <li>On production on-call, contributed OpenTelemetry tracing and Chronosphere alerts to a team observability effort that cut incident detection from 20 to 8 min and resolution from 60 to 25 min.</li>
+      <li>Built a React/TypeScript tool for support engineers to trace CDP profile-merge histories, cutting triage time 30%; wrote services test-first (TDD, pytest/JUnit, 85% coverage) and took part in design and code reviews.</li>
     </ul>
   </article>
 
@@ -81,10 +81,8 @@
     <p class="meta">Jan 2025 – May 2025 · Binghamton, NY</p>
     <ul>
       <li>Owned an on-premises AI teaching agent serving ~200 student queries/day with no cloud APIs, keeping student data on-prem (FERPA).</li>
-      <li>Raised answer accuracy with hybrid RAG (LangChain, ChromaDB, Ollama), fusing vector and BM25 search via Reciprocal Rank Fusion.</li>
-      <li>Exposed course docs as 3 MCP tools behind a LangGraph agent with step limits and fallbacks, cutting context overhead.</li>
-      <li>Served Llama 3.1 8B with 4-bit quantization and asyncio request batching, dropping latency 43% (1.2 s to 680 ms).</li>
-      <li>Saved ~$400/month versus cloud LLM APIs by running inference on-prem, backed by a cost-per-query analysis.</li>
+      <li>Raised answer accuracy with hybrid RAG (LangChain, ChromaDB, Ollama) fusing vector and BM25 search via Reciprocal Rank Fusion; exposed course docs as 3 MCP tools behind a LangGraph agent with step limits and fallbacks.</li>
+      <li>Served Llama 3.1 8B with 4-bit quantization and asyncio request batching, dropping latency 43% (1.2 s to 680 ms); saved ~$400/month versus cloud LLM APIs, backed by a cost-per-query analysis.</li>
     </ul>
   </article>
 
@@ -92,10 +90,9 @@
     <h3>Software Engineer · Virtusa (Client: Citi)</h3>
     <p class="meta">May 2021 – Jul 2023 · Hyderabad, India</p>
     <ul>
-      <li>Delivered Java/Spring Boot services and React features for customer onboarding and KYC on a 48M-user banking platform.</li>
-      <li>Integrated Onfido identity verification with Kafka-streamed status updates, cutting verification time by about two-thirds, and autoscaled the Kafka consumers on AWS EKS for peak volume.</li>
-      <li>Connected 15+ third-party REST APIs to the payments and banking module and provisioned AWS (EC2, S3) with Terraform.</li>
-      <li>Automated Jenkins CI/CD build pipelines, which cut post-deployment issues by 30%.</li>
+      <li>Delivered Java/Spring Boot services and React features for onboarding and KYC on a 48M-user banking platform.</li>
+      <li>Integrated Onfido identity verification with Kafka-streamed status updates, cutting verification time by about two-thirds; autoscaled the Kafka consumers on AWS EKS for peak volume.</li>
+      <li>Connected 15+ third-party REST APIs to the payments module, provisioned AWS (EC2, S3) with Terraform, and automated Jenkins CI/CD, cutting post-deployment issues 30%.</li>
     </ul>
   </article>
 
@@ -103,8 +100,7 @@
     <h3>Software Engineer Intern · Virtusa</h3>
     <p class="meta">Nov 2020 – Mar 2021 · Hyderabad, India</p>
     <ul>
-      <li>Wrote a reusable Spring Boot/MVC REST layer for data retrieval, so developers could add new endpoints faster.</li>
-      <li>Implemented LDAP/JWT authentication with 90% JUnit test coverage.</li>
+      <li>Wrote a reusable Spring Boot/MVC REST layer for data retrieval and implemented LDAP/JWT authentication with 90% JUnit coverage.</li>
     </ul>
   </article>
 </section>
@@ -117,9 +113,8 @@
     <p class="meta">TypeScript · Next.js · PostgreSQL · Stripe · Claude API</p>
     <p>Recruiters describe who they need in plain English; an LLM turns the brief into structured filters, Postgres finds and ranks the people, and every filter is shown back as an editable chip.</p>
     <ul>
-      <li>Designed the PostgreSQL schema and PL/pgSQL search over 5,000 profiles, with the Claude API turning free-text recruiter queries into GIN-indexed lookups and index-range paging.</li>
-      <li>Isolated tenants with row-level security and deny-by-default grants; made the free-tier limit race-proof with one atomic conditional UPDATE (concurrency test: 10 requests, 1 success, 9 rejected).</li>
-      <li>Wrote a Stripe webhook handler with HMAC verification, idempotent event-ID processing, and an out-of-order guard.</li>
+      <li>Designed the PostgreSQL schema and PL/pgSQL search over 5,000 profiles, with the Claude API turning free-text recruiter queries into GIN-indexed lookups and keyset paging.</li>
+      <li>Isolated tenants with row-level security and deny-by-default grants; made the free-tier limit race-proof with one atomic conditional UPDATE; built idempotent, HMAC-verified Stripe webhooks.</li>
     </ul>
     <p class="repo"><a href="https://github.com/SaiDeepakGupta/rotto-fullstack-task-saideepakgupta">View code on GitHub →</a></p>
   </article>
@@ -128,8 +123,7 @@
     <h3>Source-Grounded RAG Chatbot (Freelance, NDA)</h3>
     <p class="meta">Python · LangChain · Pinecone · FastAPI · AWS</p>
     <ul>
-      <li>Built a chatbot that answers from a website's own content, with Pinecone embeddings and FastAPI on auto-scaling Elastic Beanstalk.</li>
-      <li>Brought hallucination rate from 35% to under 8% by requiring every answer to cite the exact chunk it came from.</li>
+      <li>Built a chatbot answering from a website's own content (Pinecone, FastAPI on Elastic Beanstalk); brought hallucination rate from 35% to under 8% by requiring every answer to cite its source chunk.</li>
     </ul>
     <p class="note">Code is private under NDA.</p>
   </article>
@@ -161,16 +155,16 @@
 <section id="skills">
   <h2>Technical Skills</h2>
   <dl class="skills">
-    <dt>Languages</dt>
-    <dd>Python, Java, TypeScript, SQL</dd>
+    <dt>Languages &amp; Fundamentals</dt>
+    <dd>Python, Java, TypeScript, SQL; data structures &amp; algorithms, distributed systems, system design</dd>
     <dt>Backend &amp; Data</dt>
-    <dd>Spring Boot, FastAPI, Kafka, Redis, PostgreSQL, REST microservices, React, Next.js</dd>
+    <dd>Spring Boot, FastAPI, Kafka, Redis, PostgreSQL, REST microservices, event-driven pipelines, React, Next.js</dd>
     <dt>Generative AI</dt>
-    <dd>LLM evaluation &amp; guardrails, structured outputs, hybrid RAG (vector + BM25), LangGraph, MCP, LangChain</dd>
+    <dd>LLM evaluation &amp; guardrails, structured outputs, hybrid RAG (vector + BM25), LangGraph, MCP, LangChain, Claude Code</dd>
+    <dt>Data Governance</dt>
+    <dd>GDPR/CCPA consent enforcement, attribute-level access control, audit logging, row-level security</dd>
     <dt>Cloud &amp; Reliability</dt>
-    <dd>AWS (EKS, EC2, S3), Docker, Kubernetes, Terraform, OpenTelemetry, Prometheus, Jenkins CI/CD</dd>
-    <dt>AI Dev Tools</dt>
-    <dd>Claude Code, Cursor</dd>
+    <dd>AWS (EKS, EC2, S3), Docker, Kubernetes, Terraform, OpenTelemetry, Prometheus, Jenkins CI/CD, TDD</dd>
   </dl>
 </section>
 
